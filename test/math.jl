@@ -48,4 +48,7 @@ end
     @test isunitary(mat)
     mat = rand_hermitian(8)
     @test ishermitian(mat)
+
+    @test ishermitian(sprand_hermitian(8, 0.5))
+    @test isunitary(sprand_unitary(8, 0.5))
 end
